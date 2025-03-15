@@ -3,172 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game 1 - Learn Slovak Vocabulary</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: black;
-        }
-        header {
-            background-color: #B2D8B2;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #B2D8B2;
-            padding: 10px 0;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: black;
-        }
-        .content {
-            padding: 20px;
-            text-align: center;
-        }
-        .game-box {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .word, .translation {
-            padding: 10px 20px;
-            margin: 10px;
-            background-color: #B2D8B2;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 18px;
-        }
-        .word:hover, .translation:hover {
-            background-color: #98c1b7;
-        }
-        footer {
-            background-color: #B2D8B2;
-            text-align: center;
-            padding: 10px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <title>Game 1 - Slovenské Vzdelávacie Centrum</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link to your main stylesheet -->
 </head>
 <body>
 
 <header>
     <h1>Slovenské Vzdelávacie Centrum</h1>
-    <img src="../images/logo.png" alt="Charity Logo" style="height: 50px;">
+    <img src="images/logo.png" alt="Charity Logo" style="height: 50px;">
 </header>
 
 <nav>
-    <a href="../index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="membership.html">Membership</a>
-    <a href="events.html">Events</a>
-    <a href="educationalgame.html">Educational Game</a>
-    <a href="datesandfees.html">Dates and Fees</a>
-    <a href="contact.html">Contact Us</a>
+    <a href="index.html">Home</a>
+    <a href="pages/about.html">About Us</a>
+    <a href="pages/membership.html">Membership</a>
+    <a href="pages/events.html">Events</a>
+    <a href="pages/educationalgames.html">Educational Games</a>
+    <a href="pages/datesandfees.html">Dates and Fees</a>
+    <a href="pages/contactus.html">Contact Us</a>
 </nav>
 
+<!-- Game 1 Content -->
 <div class="content">
-    <h2>Game 1 - Learn Slovak Vocabulary</h2>
-    <p>Match the Slovak words to their English translation.</p>
-    
-    <div class="game-box">
-        <div class="word" id="word1">Jablko</div>
-        <div class="translation" id="translation1">Apple</div>
+    <h2>Game 1: Educational Quiz</h2>
+    <p>Welcome to Game 1! Answer the following questions:</p>
+    <form>
+        <label for="question1">What is the capital of Slovakia?</label><br>
+        <input type="radio" id="answer1" name="question1" value="answer1">
+        <label for="answer1">Bratislava</label><br>
+        <input type="radio" id="answer2" name="question1" value="answer2">
+        <label for="answer2">Košice</label><br>
+        <input type="radio" id="answer3" name="question1" value="answer3">
+        <label for="answer3">Nitra</label><br>
 
-        <div class="word" id="word2">Stôl</div>
-        <div class="translation" id="translation2">Table</div>
-
-        <div class="word" id="word3">Kniha</div>
-        <div class="translation" id="translation3">Book</div>
-
-        <div class="word" id="word4">Auto</div>
-        <div class="translation" id="translation4">Car</div>
-    </div>
-
-    <button onclick="checkAnswers()">Check Answers</button>
-    <p id="result"></p>
+        <input type="submit" value="Submit">
+    </form>
 </div>
 
 <footer>
     <p>&copy; 2025 Slovenské Vzdelávacie Centrum</p>
 </footer>
-
-<script>
-    function checkAnswers() {
-        let correct = 0;
-
-        // Checking if words match the correct translations
-        if (document.getElementById('word1').style.backgroundColor == 'rgb(98, 193, 183)') {
-            correct++;
-        }
-        if (document.getElementById('word2').style.backgroundColor == 'rgb(98, 193, 183)') {
-            correct++;
-        }
-        if (document.getElementById('word3').style.backgroundColor == 'rgb(98, 193, 183)') {
-            correct++;
-        }
-        if (document.getElementById('word4').style.backgroundColor == 'rgb(98, 193, 183)') {
-            correct++;
-        }
-
-        if (correct == 4) {
-            document.getElementById("result").innerText = "Congratulations! You matched all the words correctly!";
-        } else {
-            document.getElementById("result").innerText = "Try again! You matched " + correct + " words correctly.";
-        }
-    }
-
-    // Drag-and-drop functionality
-    const words = document.querySelectorAll('.word');
-    const translations = document.querySelectorAll('.translation');
-
-    words.forEach(word => {
-        word.addEventListener('dragstart', dragStart);
-    });
-
-    translations.forEach(translation => {
-        translation.addEventListener('dragover', dragOver);
-        translation.addEventListener('drop', drop);
-    });
-
-    function dragStart(e) {
-        e.dataTransfer.setData("text", e.target.id);
-    }
-
-    function dragOver(e) {
-        e.preventDefault();
-    }
-
-    function drop(e) {
-        const draggedWordId = e.dataTransfer.getData("text");
-        const draggedWord = document.getElementById(draggedWordId);
-        
-        // Match the word with the translation
-        if (draggedWordId == 'word1' && e.target.id == 'translation1') {
-            draggedWord.style.backgroundColor = 'rgb(98, 193, 183)';
-        }
-        if (draggedWordId == 'word2' && e.target.id == 'translation2') {
-            draggedWord.style.backgroundColor = 'rgb(98, 193, 183)';
-        }
-        if (draggedWordId == 'word3' && e.target.id == 'translation3') {
-            draggedWord.style.backgroundColor = 'rgb(98, 193, 183)';
-        }
-        if (draggedWordId == 'word4' && e.target.id == 'translation4') {
-            draggedWord.style.backgroundColor = 'rgb(98, 193, 183)';
-        }
-    }
-</script>
 
 </body>
 </html>
