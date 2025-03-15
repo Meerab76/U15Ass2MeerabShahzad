@@ -12,7 +12,6 @@
             background-color: white;
             color: black;
         }
-
         header {
             background-color: #B2D8B2; /* Sage green */
             display: flex;
@@ -20,62 +19,41 @@
             align-items: center;
             padding: 10px 20px;
         }
-
         nav {
             display: flex;
             justify-content: center;
             background-color: #B2D8B2; /* Sage green */
             padding: 10px 0;
         }
-
         nav a {
             margin: 0 15px;
             text-decoration: none;
             color: black;
         }
-
         .content {
             padding: 20px;
             text-align: center;
         }
-
-        .courses {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-            gap: 50px;
+        .course-section {
+            margin: 30px 0;
         }
-
-        .course {
+        .course-card {
             background-color: #f4f4f4;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 250px;
+            margin: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
-        .course h3 {
-            color: #4C8A4C;
+        .course-card h4 {
+            margin-bottom: 10px;
         }
-
-        .course p {
-            color: #555;
+        .course-card p {
+            margin-bottom: 10px;
         }
-
-        .booking-button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #4C8A4C;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
+        .course-card .price {
+            font-weight: bold;
+            color: #007b00;
         }
-
-        .booking-button:hover {
-            background-color: #3a6f3a;
-        }
-
         footer {
             background-color: #B2D8B2; /* Sage green */
             text-align: center;
@@ -95,45 +73,73 @@
 
 <nav>
     <a href="../index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="membership.html">Membership</a>
-    <a href="events.html">Events</a>
-    <a href="educationalgame.html">Educational Game</a>
-    <a href="datesandfees.html">Dates and Fees</a>
-    <a href="contact.html">Contact Us</a>
+    <a href="../pages/about.html">About Us</a>
+    <a href="../pages/membership.html">Membership</a>
+    <a href="../pages/events.html">Events</a>
+    <a href="../pages/educationalgame.html">Educational Game</a>
+    <a href="../pages/dates-and-fees.html">Dates and Fees</a>
+    <a href="../pages/contact.html">Contact Us</a>
 </nav>
 
-<!-- Content Section -->
 <div class="content">
-    <h2>Courses, Prices, and Booking</h2>
-    <p>Below are the available courses, their prices, and how to book your spot with us:</p>
-
-    <!-- Courses Section -->
-    <div class="courses">
-        <!-- Course 1 -->
-        <div class="course">
-            <h3>Slovak Language Course</h3>
-            <p>Duration: 10 weeks</p>
-            <p>Price: £100</p>
-            <button class="booking-button">Book Now</button>
-        </div>
-
-        <!-- Course 2 -->
-        <div class="course">
-            <h3>Slovak Culture Workshop</h3>
-            <p>Duration: 5 weeks</p>
-            <p>Price: £50</p>
-            <button class="booking-button">Book Now</button>
-        </div>
-
-        <!-- Course 3 -->
-        <div class="course">
-            <h3>Advanced Slovak Language</h3>
-            <p>Duration: 12 weeks</p>
-            <p>Price: £120</p>
-            <button class="booking-button">Book Now</button>
+    <h2>Courses and Fees</h2>
+    
+    <!-- Course 1 -->
+    <div class="course-section">
+        <div class="course-card">
+            <h4>Slovak Language Beginner Course</h4>
+            <p>A great start for beginners. Learn the basics of Slovak including greetings, numbers, and common phrases.</p>
+            <p><strong>Duration:</strong> 10 weeks</p>
+            <p class="price">Price: £100</p>
+            <button>Book Now</button>
         </div>
     </div>
+
+    <!-- Course 2 -->
+    <div class="course-section">
+        <div class="course-card">
+            <h4>Intermediate Slovak Course</h4>
+            <p>This course is for those who have a basic understanding of Slovak and want to improve their skills in speaking and writing.</p>
+            <p><strong>Duration:</strong> 10 weeks</p>
+            <p class="price">Price: £120</p>
+            <button>Book Now</button>
+        </div>
+    </div>
+
+    <!-- Course 3 -->
+    <div class="course-section">
+        <div class="course-card">
+            <h4>Advanced Slovak Course</h4>
+            <p>This course is for advanced learners who want to achieve fluency in Slovak and practice complex sentence structures.</p>
+            <p><strong>Duration:</strong> 10 weeks</p>
+            <p class="price">Price: £150</p>
+            <button>Book Now</button>
+        </div>
+    </div>
+
+    <!-- Add More Courses Here -->
+    <!-- Course 4 -->
+    <div class="course-section">
+        <div class="course-card">
+            <h4>Slovak Culture and Traditions Workshop</h4>
+            <p>Explore the rich culture of Slovakia, including its customs, history, and folklore.</p>
+            <p><strong>Duration:</strong> 5 weeks</p>
+            <p class="price">Price: £80</p>
+            <button>Book Now</button>
+        </div>
+    </div>
+
+    <!-- Course 5 -->
+    <div class="course-section">
+        <div class="course-card">
+            <h4>Slovak Cooking Class</h4>
+            <p>Learn to cook traditional Slovak dishes and enjoy the flavors of Slovakia!</p>
+            <p><strong>Duration:</strong> 4 weeks</p>
+            <p class="price">Price: £60</p>
+            <button>Book Now</button>
+        </div>
+    </div>
+
 </div>
 
 <footer>
