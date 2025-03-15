@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slovenské Vzdelávacie Centrum</title>
     <style>
+        /* General styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -12,6 +13,7 @@
             background-color: white;
             color: black;
         }
+
         header {
             background-color: #B2D8B2; /* Sage green */
             display: flex;
@@ -19,20 +21,25 @@
             align-items: center;
             padding: 10px 20px;
         }
+
         nav {
             display: flex;
             justify-content: center;
             background-color: #B2D8B2; /* Sage green */
             padding: 10px 0;
         }
+
         nav a {
             margin: 0 15px;
             text-decoration: none;
             color: black;
         }
+
         .content {
             padding: 20px;
+            text-align: center;
         }
+
         footer {
             background-color: #B2D8B2; /* Sage green */
             text-align: center;
@@ -40,6 +47,44 @@
             position: relative;
             bottom: 0;
             width: 100%;
+        }
+
+        .game-section {
+            margin-top: 30px;
+        }
+
+        .game-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .game-list li {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .game-list a {
+            text-decoration: none;
+            color: #006400; /* Dark green */
+            font-weight: bold;
+        }
+
+        .game-list a:hover {
+            color: #32CD32; /* Lime green */
+        }
+
+        .benefits-section {
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .benefits-section h3 {
+            color: #006400;
+        }
+
+        .benefits-section ul {
+            list-style-type: square;
+            margin-left: 40px;
         }
     </style>
 </head>
@@ -52,24 +97,48 @@
 
 <nav>
     <a href="index.html">Home</a>
-    <a href="pages/aboutus.html">About Us</a>
+    <a href="pages/about.html">About Us</a>
     <a href="pages/membership.html">Membership</a>
     <a href="pages/events.html">Events</a>
-    <a href="pages/educationalgame.html">Educational Game</a>
+    <a href="pages/educationalgames.html">Educational Games</a>
     <a href="pages/datesandfees.html">Dates and Fees</a>
     <a href="pages/contact.html">Contact Us</a>
 </nav>
 
+<!-- Content Section -->
 <div class="content">
-    <h2>Here is everything about the charity</h2>
-    <h3>Who We Are</h3>
-    <p>Slovenské Vzdelávacie Centrum – South Manchester is a registered charity dedicated to preserving and promoting Slovak language and culture. We provide Slovak language education and organize cultural and community activities to help Slovak-speaking families maintain their heritage while living abroad.</p>
-    <p>While our primary focus is on supporting Slovak-speaking children and families, we warmly welcome anyone interested in learning the Slovak language and engaging with our traditions. Beyond our Saturday school, we offer various workshops, events, and social activities where individuals of all ages can connect, learn, and take part in our cultural community.</p>
+    <h2>Welcome to Slovenské Vzdelávacie Centrum</h2>
+    <p>We are dedicated to preserving and promoting Slovak language and culture through educational programs and community activities. Whether you’re a child or an adult, we have something for everyone to learn and enjoy!</p>
 
-    <h3>Our Mission</h3>
-    <p>At Slovenské Vzdelávacie Centrum – South Manchester, our mission goes beyond just teaching the Slovak language. We are here to keep our heritage alive, to ensure that children growing up abroad don’t lose their connection to their roots, and to create a place where Slovak culture thrives—even far from home.</p>
-    <p>We believe that language is more than just words; it carries identity, history, and a sense of belonging. Through our work, we bring Slovak-speaking families together, helping them build friendships, strengthen their cultural ties, and feel at home even while living in the UK.</p>
-    <p>Education is at the heart of what we do, but our purpose extends even further. We are here to bridge the gap between the UK and Slovak education systems, ensuring that children who may one day return to Slovakia are well-prepared.</p>
+    <h3>Why Learn Slovak?</h3>
+    <p>Slovak is not just a language, but a way to connect with your heritage. By learning Slovak, you get to experience the rich traditions, history, and culture of Slovakia. It also allows you to communicate with other Slovak speakers, form new friendships, and even connect with relatives from Slovakia.</p>
+
+    <h3>Educational Games: Learning Made Fun!</h3>
+    <p>Our educational games are designed to help you learn the Slovak language and culture in a fun, interactive way. These games are perfect for children, but also enjoyable for adults who want to practice their skills. Below are some of our games:</p>
+
+    <div class="game-section">
+        <h4>Our Educational Games</h4>
+        <ul class="game-list">
+            <li><a href="game1.html">Game 1: Slovak Vocabulary Challenge</a> - Improve your Slovak vocabulary by guessing the correct words in different categories.</li>
+            <li><a href="game2.html">Game 2: Slovak Grammar Quiz</a> - Test your knowledge of Slovak grammar with multiple-choice questions.</li>
+            <li><a href="game3.html">Game 3: Slovak Culture Trivia</a> - Discover interesting facts about Slovak traditions, food, and history through a fun quiz.</li>
+        </ul>
+    </div>
+
+    <div class="benefits-section">
+        <h3>Why Choose Our Educational Games?</h3>
+        <ul>
+            <li><strong>Interactive Learning:</strong> Games make learning more engaging and memorable. Interactive activities help reinforce lessons.</li>
+            <li><strong>Accessible to All Ages:</strong> Our games are designed for both children and adults, making it easier for everyone to get involved.</li>
+            <li><strong>Track Progress:</strong> Many of our games allow you to track your progress, so you can see how much you’ve learned over time.</li>
+            <li><strong>Learn Slovak in a Fun Way:</strong> Instead of memorizing lessons, you’ll learn by playing games, which makes the process much more enjoyable!</li>
+            <li><strong>Multilingual Support:</strong> Our games are designed with multilingual speakers in mind, making it easy for anyone to get started with Slovak.</li>
+        </ul>
+    </div>
+
+    <h3>Get Started Today!</h3>
+    <p>Don't wait—start playing our games and improve your Slovak today! Whether you are just starting or already have some knowledge of the language, our games will challenge you and help you grow.</p>
+
 </div>
 
 <footer>
@@ -78,5 +147,4 @@
 
 </body>
 </html>
-
 
