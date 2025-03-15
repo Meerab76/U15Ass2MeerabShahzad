@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game 2 - Slovak Word Puzzle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: black;
+        }
+        header {
+            background-color: #B2D8B2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #B2D8B2;
+            padding: 10px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .puzzle {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .puzzle-word {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #B2D8B2;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .puzzle-word:hover {
+            background-color: #98c1b7;
+        }
+        footer {
+            background-color: #B2D8B2;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Slovenské Vzdelávacie Centrum</h1>
+    <img src="../images/logo.png" alt="Charity Logo" style="height: 50px;">
+</header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="membership.html">Membership</a>
+    <a href="events.html">Events</a>
+    <a href="educationalgame.html">Educational Game</a>
+    <a href="datesandfees.html">Dates and Fees</a>
+    <a href="contact.html">Contact Us</a>
+</nav>
+
+<div class="content">
+    <h2>Game 2 - Slovak Word Puzzle</h2>
+    <p>Unscramble the Slovak words!</p>
+    
+    <!-- Puzzle section -->
+    <div class="puzzle">
+        <div id="word1" class="puzzle-word" draggable="true" ondragstart="drag(event)">ojablk</div>
+        <div id="word2" class="puzzle-word" draggable="true" ondragstart="drag(event)">sátol</div>
+        <div id="word3" class="puzzle-word" draggable="true" ondragstart="drag(event)">knaih</div>
+        <div id="word4" class="puzzle-word" draggable="true" ondragstart="drag(event)">utoa</div>
+    </div>
+
+    <!-- Drop zones for the puzzle -->
+    <div class="puzzle" id="dropZones">
+        <div id="drop1" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="drop2" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="drop3" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="drop4" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+
+    <button onclick="checkPuzzle()">Check Answers</button>
+    <p class="result" id="result"></p>
+</div>
+
+<footer>
+    <p>&copy; 2025 Slovenské Vzdelávacie Centrum</p>
+</footer>
+
+<script>
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        var draggedElement = document.getElementById(data);
+        var dropZone = ev.target;
+
+        // If the drop zone is empty, move the word to the drop zone
+        if (dropZone.innerHTML === "") {
+            dropZone.appendChild(draggedElement);
+        }
+    }
+
+    function checkPuzzle() {
+        let correct = 0;
+        let resultText = "";
+
+        // Checking if words are correctly placed in the drop zones
+        if (document.getElementById("drop1").innerText.trim() === "jablko") {
+            correct++;
+        }
+        if (document.getElementById("drop2").innerText.trim() === "stôl") {
+            correct++;
+        }
+        if (document.getElementById("drop3").innerText.trim() === "kniha") {
+            correct++;
+        }
+        if (document.getElementById("drop4").innerText.trim() === "auto") {
+            correct++;
+        }
+
+        if (correct === 4) {
+            resultText = "Congratulations! All words are correct!";
+        } else {
+            resultText = "You matched " + correct + " words correctly. Try again!";
+        }
+
+        document.getElementById("result").innerText = resultText;
+    }
+</script>
+
+</body>
+</html>
