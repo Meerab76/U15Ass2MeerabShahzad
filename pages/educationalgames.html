@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educational Games - Slovenské Vzdelávacie Centrum</title>
+    <title>Events - Slovenské Vzdelávacie Centrum</title>
     <style>
-        /* Basic styling for the Educational Game page */
+        /* Basic styling for the Events page */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -40,26 +40,27 @@
             text-align: center;
         }
 
-        .game-list {
+        .event-list {
             display: flex;
-            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
             margin-top: 30px;
         }
 
-        .game {
+        .event {
             background-color: #f2f2f2;
             border-radius: 10px;
+            margin: 10px;
             padding: 20px;
-            width: 25%;
+            width: 80%;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
         }
 
-        .game h3 {
-            color: #4CAF50; /* Green for game title */
+        .event h3 {
+            color: #4CAF50; /* Green for event title */
         }
 
-        .game p {
+        .event p {
             font-size: 16px;
             line-height: 1.5;
         }
@@ -72,7 +73,6 @@
             bottom: 0;
             width: 100%;
         }
-
     </style>
 </head>
 <body>
@@ -94,31 +94,39 @@
 
 <!-- Content Section -->
 <div class="content">
-    <h2>Educational Games</h2>
-    <p>Explore our fun and interactive educational games designed to help children learn the Slovak language and culture while having fun! Choose a game below to start playing.</p>
-    
-    <!-- Game List Section -->
-    <div class="game-list">
+    <h2>Upcoming Events</h2>
+    <div class="event-list">
 
-        <!-- Game 1 -->
-        <div class="game">
-            <h3>Game 1: Slovak Vocabulary Challenge</h3>
-            <p>Test your knowledge of Slovak vocabulary by matching words with their meanings. Perfect for learners of all levels!</p>
-            <a href="game1.html">Play Game 1</a>
+        <!-- Event 1 -->
+        <div class="event">
+            <h3>Slovak Language Workshop</h3>
+            <p><strong>Date:</strong> April 25, 2025</p>
+            <p><strong>Location:</strong> South Manchester Community Center</p>
+            <p><strong>Details:</strong> A workshop designed to help children and adults improve their Slovak language skills through interactive activities and practice sessions.</p>
         </div>
 
-        <!-- Game 2 -->
-        <div class="game">
-            <h3>Game 2: Slovak Culture Quiz</h3>
-            <p>Learn more about Slovak culture with this fun quiz! Answer questions about Slovakia’s history, traditions, and landmarks.</p>
-            <a href="game2.html">Play Game 2</a>
+        <!-- Event 2 -->
+        <div class="event">
+            <h3>Slovak Cultural Night</h3>
+            <p><strong>Date:</strong> May 15, 2025</p>
+            <p><strong>Location:</strong> Slovenské Vzdelávacie Centrum Hall</p>
+            <p><strong>Details:</strong> Join us for an evening of Slovak music, dance, and food! A chance to experience the culture first-hand and meet other Slovak families.</p>
         </div>
 
-        <!-- Game 3 -->
-        <div class="game">
-            <h3>Game 3: Slovak Alphabet Race</h3>
-            <p>Challenge your speed and memory in this alphabet race! Learn the Slovak alphabet while racing against the clock.</p>
-            <a href="game3.html">Play Game 3</a>
+        <!-- Event 3 -->
+        <div class="event">
+            <h3>Traditional Slovak Cooking Class</h3>
+            <p><strong>Date:</strong> June 10, 2025</p>
+            <p><strong>Location:</strong> Community Kitchen, South Manchester</p>
+            <p><strong>Details:</strong> Learn to prepare traditional Slovak dishes with expert chefs. Perfect for anyone interested in Slovak cuisine and culture.</p>
+        </div>
+
+        <!-- Event 4 -->
+        <div class="event">
+            <h3>Summer Slovak Festival</h3>
+            <p><strong>Date:</strong> July 5, 2025</p>
+            <p><strong>Location:</strong> South Manchester Park</p>
+            <p><strong>Details:</strong> A fun-filled day with games, food stalls, live music, and cultural performances. Bring your friends and family for a celebration of Slovak heritage!</p>
         </div>
 
     </div>
@@ -130,5 +138,6 @@
 
 </body>
 </html>
+
 
 
