@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -47,6 +47,34 @@
             bottom: 0;
             width: 100%;
         }
+
+        /* Styling for extra sections */
+        .team, .events, .cta {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .team h2, .events h2, .cta h2 {
+            color: #4C8C4A; /* Darker green for titles */
+        }
+
+        .team p, .events p, .cta p {
+            font-size: 18px;
+        }
+
+        .cta button {
+            background-color: #4C8C4A;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .cta button:hover {
+            background-color: #3A6B3A;
+        }
     </style>
 </head>
 <body>
@@ -54,7 +82,7 @@
 <header>
     <h1>Slovenské Vzdelávacie Centrum</h1>
     <!-- Logo image -->
-    <img src="images/logo.png" alt="Charity Logo" style="height: 70px;">
+    <img src="images/logo.png" alt="Charity Logo" style="height: 100px;">
 </header>
 
 <nav>
@@ -78,6 +106,32 @@
     <p>At Slovenské Vzdelávacie Centrum – South Manchester, our mission goes beyond just teaching the Slovak language. We are here to keep our heritage alive, to ensure that children growing up abroad don’t lose their connection to their roots, and to create a place where Slovak culture thrives—even far from home.</p>
     <p>We believe that language is more than just words; it carries identity, history, and a sense of belonging. Through our work, we bring Slovak-speaking families together, helping them build friendships, strengthen their cultural ties, and feel at home even while living in the UK.</p>
     <p>Education is at the heart of what we do, but our purpose extends even further. We are here to bridge the gap between the UK and Slovak education systems, ensuring that children who may one day return to Slovakia are well-prepared.</p>
+
+    <!-- Our Team Section -->
+    <div class="team">
+        <h2>Meet Our Team</h2>
+        <p>Our dedicated team is passionate about preserving Slovak culture and language. Each member brings their expertise and commitment to providing an enriching educational experience.</p>
+        <p>We have experienced teachers, cultural organizers, and community leaders who are here to help children and adults alike learn and grow within the Slovak community.</p>
+    </div>
+
+    <!-- Upcoming Events Section -->
+    <div class="events">
+        <h2>Upcoming Events</h2>
+        <p>Join us for various events throughout the year! Our calendar includes cultural festivals, workshops, and social gatherings that bring the Slovak community together.</p>
+        <ul>
+            <li>Slovak Language Workshops – March 20th, 2025</li>
+            <li>Slovak Christmas Festival – December 12th, 2025</li>
+            <li>Community Picnic and BBQ – August 15th, 2025</li>
+        </ul>
+        <p>Stay tuned for more exciting events!</p>
+    </div>
+
+    <!-- Call to Action Section -->
+    <div class="cta">
+        <h2>Get Involved</h2>
+        <p>We are always looking for new members to join our vibrant community. Whether you're interested in learning the Slovak language, participating in events, or volunteering to help us with our activities, there's a place for you here.</p>
+        <button onclick="window.location.href='pages/membership.html'">Join Us Today!</button>
+    </div>
 </div>
 
 <footer>
